@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MEN.Data.Common\MEN.Data.Common.csproj" />
+    <ProjectReference Include="..\MEN.Data.Models\MEN.Data.Models.csproj" />
+    <ProjectReference Include="..\MEN.GCommon\MEN.GCommon.csproj" />
+  </ItemGroup>
+
 </Project>
