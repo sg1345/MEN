@@ -9,13 +9,17 @@ namespace MEN.Data.Models
     {
         [Key]
         public Guid Id { get; set; }
-        public Guid TemplateId { get; set; }
+
+        [ForeignKey(nameof(WorkoutTemplate))]
+        public Guid WorkoutTemplateId { get; set; }
+        public virtual WorkoutTemplate WorkoutTemplate { get; set; } = null!;
 
         [ForeignKey(nameof(Exercise))]
         public Guid ExerciseId { get; set; }
+        public virtual Exercise Exercise { get; set; } = null!;
 
         public int DefaultSets { get; set; } = TemplateItemDefaultSets;
 
-        public Exercise? Exercise { get; set; }
+
     }
 }
