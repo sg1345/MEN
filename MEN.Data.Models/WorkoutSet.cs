@@ -9,9 +9,11 @@ namespace MEN.Data.Models
         public Guid Id { get; set; }
 
         public Guid WorkoutLogId { get; set; }
+        public virtual WorkoutLog WorkoutLog { get; set; } = null!;
 
         [ForeignKey(nameof(Exercise))]
         public Guid ExerciseId { get; set; }
+        public virtual Exercise Exercise { get; set; } = null!;
 
         [Required]
         public int SetNumber { get; set; }
@@ -27,6 +29,6 @@ namespace MEN.Data.Models
         [Required]
         public bool IsCompleted { get; set; } = false;
 
-        public virtual Exercise Exercise { get; set; } = null!;
+        
     }
 }
